@@ -15,6 +15,8 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "no-unreachable": "error" //this rule will not allow any code after return,throw,break,continue  https://eslint.org/docs/latest/rules/no-unreachable
+    "no-unreachable": "error", //this rule will not allow any code after return,throw,break,continue  https://eslint.org/docs/latest/rules/no-unreachable
+    "no-restricted-imports": ["error","moment"] // ths rule will make sure listed library is going to be use in this project
+
   }
 }

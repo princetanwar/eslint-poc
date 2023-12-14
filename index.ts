@@ -1,3 +1,8 @@
+// import moment from 'moment';
+
+
+// console.log(moment);
+
 const myName = 'prince';
 console.log(myName);
 const a = [
