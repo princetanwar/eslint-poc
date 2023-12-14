@@ -33,11 +33,14 @@ Q.how eslint identify rule volition
 answer. eslint use AST (abstract syntax tree) to scan the code and then run it's matcher against the AST to find code volition
 
 below are some tool the use AST.
+
+```
     webpack
     babel.js
     linters
     minifiers
     syntax highlighters
+```
 
 checkout for more info on AST -> https://astexplorer.net/ 
 
