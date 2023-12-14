@@ -5,6 +5,8 @@
 
 const myName = 'prince';
 console.log(myName);
+
+// console.log(myName == 'prince');
 const a = [
   1,
   
