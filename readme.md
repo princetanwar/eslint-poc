@@ -68,7 +68,7 @@ eslint file contain a object with some key and value that defines how es-lint wi
      "parser": "babel-eslint"
     
     ```
-    * babel-eslint parser is used when are project is using babel for transpilation of code.
+    * babel-eslint parser is used when  the project is using babel for transpilation of code.
     
 
 
