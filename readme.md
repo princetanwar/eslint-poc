@@ -288,3 +288,107 @@ below are the step to add typescript support in the project.
     }
 
 ```
+
+
+<h2 align='center'> create custom eslint rule follow below steps </h2>
+
+1. create a folder where you want to store all the rules and a index.js file for eslint
+
+```diff
+
++   ├── my-eslint-plugin
++   │   ├──custom-rule.js 
++   │   ├──index.js
+     ....
+
+```
+
+2. create a file where you can store the rule code. below is a example of custom rule function  defined in custom-rule.js file
+
+```diff
+
++    module.exports = {
++    meta: {
++        type: 'problem',
++        docs: {
++        description: 'Description of the rule',
++        },
++        fixable: 'code',
++        schema: [], // no options
++    },
++    create(context) {
++        return {
++        // callback functions
++        CallExpression(node) {
++            if (node.callee.name === 'fun') {
++            context.report({ node, message: 'do\'t use fun method' });
++            }
++        },
++        };
++    },
++    };
+
+
+```
+
+
+3. create a index.js file in the folder with below format below is the example of my-eslint-plugin/index.js file
+
+
+```diff
++    const noFunFunction = require('./custom-rule');
+
++    module.exports = {
++    rules: {
++        'no-fun-function': noFunFunction,
++    },
++    };
+
+
+```
+ * "no-fun-function" is rule name and noFunFunction is the rule code that is defined in "custom-rule" file.
+
+
+4. now link the rule with eslint for that define the rule-code a dev-dependency in packages.json like below
+
+```diff
+
+   "devDependencies": {
+    ...
++    "eslint-plugin-my-eslint-plugin": "file:my-eslint-plugin"
+   }
+
+```
+
+    * make sure to prefix the dependency name with "eslint-plugin-" as it's a standard in the eslint community.
+
+5. now add your custom code as a plugin in eslint file like below.
+
+```diff
+
+ "plugins": [
+    ...
++    "my-eslint-plugin"
+    ],
+
+```
+
+6. now you can enable your custom rules
+
+```diff
+
+  "rules": {
+    ....
++    "my-eslint-plugin/no-fun-function": "error"
+  },
+
+```
+
+
+
+
+
+
+
+
+
