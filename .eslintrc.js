@@ -9,7 +9,8 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "airbnb-typescript",
-    "airbnb/hooks"
+    "airbnb/hooks",
+    "plugin:my-eslint-plugin/myConfig"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

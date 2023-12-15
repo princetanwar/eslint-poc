@@ -385,8 +385,42 @@ below are the step to add typescript support in the project.
 ```
 
 
+<h2> you can create custom configuration as well with the plugin follow below steps </h2>
+
+1. add configs keys in the index.js file of plugin and add a key for configuration  name like below
+
+```diff
+# /my-eslint-plugin/index.js
+
+    module.exports = {
+        ...
++        configs:{
++            myConfig:{
++                rules:{
++                    'my-eslint-plugin/no-fun-function': 'error'
++                }
++            }
++        }
+
+    }
 
 
+```
+
+2. now you can add the plugin config in eslint file like below
+
+
+```diff
+    module.exports = {
+        ... 
+        "extends": [
+            ...
++            "plugin:my-eslint-plugin/myConfig"
+        ],
+    }
+
+
+```
 
 
 
