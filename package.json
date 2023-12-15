@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "eslint-test": "eslint .",
-    "eslint-fix": "eslint --fix .",
+    "lint:test": "eslint .",
+    "lint:fix": "eslint --fix .",
     "prepare": "husky install"
   },
   "keywords": [],
