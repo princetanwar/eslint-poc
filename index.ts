@@ -1,6 +1,5 @@
 // import moment from 'moment';
 
-
 // console.log(moment);
 
 const myName = 'prince';
@@ -9,19 +8,15 @@ const myName = 'prince';
 // console.log(myName == 'prince');
 const a = [
   1,
-  
+
   3, 4,
 
-  4,   5, 5, 7,
+  4, 5, 5, 7,
 ];
 // console.log(a);
 
-const fun = (d:string | number[]) =>{
-  return d;
-  //   console.log('hello');
-
-
-};
+const fun = (d:string | number[]) => d;
+//   console.log('hello');
 
 fun(myName);
 fun(a);
