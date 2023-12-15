@@ -1,4 +1,4 @@
-{
+module.exports = {
   "root": true,
   "env": {
     "browser": true,
@@ -8,12 +8,15 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb",
+    "airbnb-typescript",
     "airbnb/hooks"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": true,
+    "tsconfigRootDir": __dirname
   },
   "plugins": ["@typescript-eslint"],
   "rules": {

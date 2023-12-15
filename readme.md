@@ -199,59 +199,39 @@ below are the step to add typescript support in the project.
 
     ```
     npx install-peerdeps --dev eslint-config-airbnb
+
+    npm i -D eslint-config-airbnb-typescript
     ```
-    * this will install all the required dependency of airbnb eslint base configuration and airbnb react configuration 
+    * this will install all the required dependency of airbnb eslint base configuration and airbnb react configuration and typescript config.
 
 2. add below in the extend section of your eslint and it will start working.
 
 
     ```
-    "extends": ["airbnb","airbnb/hooks"]
+    "extends": ["airbnb","airbnb-typescript","airbnb/hooks"]
     
     ```
     * note:  you can add more rule-set library if needed for the project.
 
 
-<h3 align='center'> after all this configuration file looks something file below </h3>
+<h3 align='center'>configuration file changes</h3>
 
     
 ```diff
     {
-    "root": true,
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
+        ....
     "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
+        ...
 +       "airbnb",
++       "airbnb-typescript"
 +       "airbnb/hooks"
     ],
-    "parser": "@typescript-eslint/parser",
++   "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+       ...
     },
-    "plugins": ["@typescript-eslint"],
-    "rules": {
-        "indent": ["error", 2],
-        "linebreak-style": ["error", "unix"],
-        "quotes": ["error", "single"],
-        "semi": ["error", "always"],
-        "no-unreachable": "error", //this rule will not allow any code after return,throw,break,continue  https://eslint.org/docs/latest/rules/no-unreachable
-        "no-restricted-imports": ["error", "moment"], // ths rule will make sure listed library is going to be use in this project
-        "eqeqeq": "error", // this rule make sure we use "===" not "==" when comparing the things
-        "no-console": "error"
-    },
-    "overrides": [
-        {
-        "files": "*.js",
-        "rules": {
-            "no-console": "off"
-        }
-        }
-    ]
++   "plugins": ["@typescript-eslint"],
+
     }
 
     
@@ -263,3 +243,48 @@ below are the step to add typescript support in the project.
 
 
 
+
+<h2 align='center'>Recommend Eslint for Node.js + Typescript</h2>
+
+1. run below commend to install required dependency
+
+    ```
+    npx install-peerdeps --dev eslint-config-airbnb-base
+        
+    npm i -D eslint-config-airbnb-typescript
+    ```
+    * this will install all the required dependency of airbnb eslint base configuration and typescript config.
+
+2. add below in the extend section of your eslint and it will start working.
+
+
+    ```
+    "extends": ["airbnb-base","airbnb-typescript/base"]
+    
+    ```
+    * note:  you can add more rule-set library if needed for the project.
+
+
+
+
+<h3 align='center'>configuration file Changes</h3>
+
+```diff
+
+
+    {
+        ...
+    "extends": [
+        ...
++       "airbnb-base",
++       "airbnb-typescript/base"
+    ],
++   "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        ...
+    },
++   "plugins": ["@typescript-eslint"],
+
+    }
+
+```
