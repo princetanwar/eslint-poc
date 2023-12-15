@@ -4,7 +4,7 @@
 // console.log(moment);
 
 const myName = 'prince';
-console.log(myName);
+// console.log(myName);
 
 // console.log(myName == 'prince');
 const a = [
@@ -14,13 +14,14 @@ const a = [
 
   4,   5, 5, 7,
 ];
-console.log(a);
+// console.log(a);
 
-const fun = () =>{
-  return 'hello';
+const fun = (d:string | number[]) =>{
+  return d;
   //   console.log('hello');
 
 
 };
 
-fun();
+fun(myName);
+fun(a);
