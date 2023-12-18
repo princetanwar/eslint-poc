@@ -12,7 +12,7 @@ module.exports = {
       // callback functions
       CallExpression(node) {
         if (node.callee.name === 'fun') {
-          context.report({ node, message: 'do\'t use fun method' });
+          context.report({ node, message: "do't use fun method" });
         }
       },
     };

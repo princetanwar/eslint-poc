@@ -4,11 +4,11 @@ module.exports = {
   rules: {
     'no-fun-function': noFunFunction,
   },
-  configs:{
-    myConfig:{
-      rules:{
-        'my-eslint-plugin/no-fun-function': 'error'
-      }
-    }
-  }
+  configs: {
+    myConfig: {
+      rules: {
+        'my-eslint-plugin/no-fun-function': 'error',
+      },
+    },
+  },
 };

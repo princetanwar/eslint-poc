@@ -15,7 +15,7 @@ const a = [
 ];
 // console.log(a);
 
-const fun = (d:string | number[]) => d;
+const fun = (d: string | number[]) => d;
 //   console.log('hello');
 
 fun(myName);
